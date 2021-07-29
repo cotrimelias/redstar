@@ -1,0 +1,141 @@
+@import "./keyframes";
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: white;
+    color: #ff2b2b;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    h1 {
+        font-weight: 600;
+    }
+}
+
+#canvas-wrap {
+    position: relative;
+    canvas {
+        transition: 500ms;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        animation-name: canvasentrance;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in;
+    }
+    #overlay {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 8fr;
+        grid-template-areas: "header" "wrapper";
+        header {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 1.5em;
+            grid-area: header;
+            .logo {
+                cursor: pointer;
+                margin-left: 4em;
+            }
+            img {
+                height: 7em;
+            }
+        }
+        .wrapper {
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+            padding: 1.5em;
+            grid-area: wrapper;
+            .title {
+                font-size: 6em;
+                line-height: 2em;
+                letter-spacing: -15px;
+                margin-left: 0.7em;
+                margin-top: 0.7em;
+                h1 {
+                    margin: 0px;
+                }
+                #thebest {
+                    transition: 500ms;
+                    clip-path: inset(100% 0 0 0);
+                    animation-timing-function: ease-out;
+                    animation-name: clipentrance;
+                    animation-duration: 5s;
+                    animation-delay: 1s;
+                    animation-fill-mode: forwards;
+                    line-height: 1em;
+                    height: 1.1em;
+                }
+                #the {
+                    transition: 500ms;
+                    display: inline-block;
+                    margin-left: 0.165em;
+                    clip-path: inset(100% 0 0 0);
+                    animation-name: clipentrance;
+                    animation-duration: 5s;
+                    animation-delay: 1.5s;
+                    animation-fill-mode: forwards;
+                    width: 1.4em;
+                    position: relative;
+                    top: -0.1em;
+                }
+                #world {
+                    position: relative;
+                    top: -0.1em;
+                    transition: 500ms;
+                    display: inline-block;
+                    clip-path: inset(100% 0 0 0);
+                    animation-name: clipentrancedelay;
+                    animation-duration: 5s;
+                    animation-delay: 1.5s;
+                    animation-fill-mode: forwards;
+                }
+                #findout {
+                    display: inline-block;
+                    width: 8vw;
+                    cursor: pointer;
+                    letter-spacing: -2px;
+                    padding: 8px 10px;
+                    font-size: 0.4em;
+                    font-family: "Oswald", sans-serif;
+                    font-weight: 200;
+                    color: #ff2b2b;
+                    text-transform: uppercase;
+                    line-height: 1em;
+                    position: relative;
+                    bottom: 2em;
+                    left: 2em;
+                    animation-name: buttonappearence;
+                    animation-duration: 6s;
+                    .after {
+                        content: "";
+                        margin-top: 0.4vw;
+                        width: 0px;
+                        height: 2px;
+                        display: block;
+                        background-color: #ff2b2b;
+                        transition: 500ms;
+                    }
+                    &:hover {
+                        .after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import "./_mediaqueries.scss";

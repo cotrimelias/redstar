@@ -1,0 +1,155 @@
+/* 404 Animation */
+
+@keyframes glitch {
+    2%,
+    64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%,
+    60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+@keyframes glitchTop {
+    2%,
+    64% {
+        transform: translate(2px, -2px);
+    }
+    4%,
+    60% {
+        transform: translate(-2px, 2px);
+    }
+    62% {
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+@keyframes glitchBotom {
+    2%,
+    64% {
+        transform: translate(-2px, 0);
+    }
+    4%,
+    60% {
+        transform: translate(-2px, 0);
+    }
+    62% {
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+
+/* 404 Animation */
+
+
+/* Slide Entrance */
+
+@-webkit-keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes clipentrance {
+    0% {
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+        clip-path: inset(100% 0 0 0);
+    }
+    10% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes clipentrancedelay {
+    0% {
+        -webkit-transform: translate3d(0, 30%, 0);
+        transform: translate3d(0, 30%, 0);
+        clip-path: inset(100% 0 0 0);
+    }
+    5% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes canvasentrance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Slide Entrance */
+
+
+/* Button Entrance */
+
+@keyframes buttonappearence {
+    0% {
+        opacity: 0;
+        pointer-events: none;
+    }
+    40% {
+        opacity: 0;
+        pointer-events: none;
+    }
+    60% {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    100% {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+
+/* Button Entrance */
+
+
+/* Button Out */
+
+@keyframes outanimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(1000px);
+    }
+}

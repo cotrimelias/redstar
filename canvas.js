@@ -12,33 +12,34 @@ var cellYcount = 20;
 var rgbaColor = "rgba(255,0,0, 0.25)";
 var distancetraveled = 0;
 // Grid Object
-function Gridcell(x, y, dx, rgba) {
-    //Internal Variables
-    this.x = x;
-    this.y = y;
-    this.dx = dx;
-    this.rgba = rgba;
-    //Draw
-
-    this.draw = function() {
-        //Linha Vertical
-        c.beginPath();
-        c.moveTo(this.x, this.y);
-        c.lineTo(this.x + 10, this.y);
-        c.strokeStyle = rgba;
-        c.stroke();
-        // Linha Horizontal
-        c.beginPath();
-        c.moveTo(this.x + 5, this.y - 5);
-        c.lineTo(this.x + 5, this.y + 5);
-        c.strokeStyle = rgba;
-        c.stroke();
-    };
-    //Update
-    this.update = function() {
-        this.x += this.dx;
-        this.draw();
-    };
+class Gridcell {
+    constructor(x, y, dx, rgba) {
+        //Internal Variables
+        this.x = x;
+        this.y = y;
+        this.dx = dx;
+        this.rgba = rgba;
+        //Draw
+        this.draw = function() {
+            //Linha Vertical
+            c.beginPath();
+            c.moveTo(this.x, this.y);
+            c.lineTo(this.x + 10, this.y);
+            c.strokeStyle = rgba;
+            c.stroke();
+            // Linha Horizontal
+            c.beginPath();
+            c.moveTo(this.x + 5, this.y - 5);
+            c.lineTo(this.x + 5, this.y + 5);
+            c.strokeStyle = rgba;
+            c.stroke();
+        };
+        //Update
+        this.update = function() {
+            this.x += this.dx;
+            this.draw();
+        };
+    }
 }
 
 // Interactivity
